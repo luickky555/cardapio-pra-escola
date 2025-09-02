@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio Escolar Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🍽️ Cardápio Escolar Inteligente</h1>
+
+    <!-- Formulário para adicionar alimentos -->
+    <form id="form-cardapio">
+      <input type="text" id="comida" placeholder="Nome da comida" required>
+      <input type="number" id="proteina" placeholder="Proteínas (g)" required>
+      <input type="number" id="carbo" placeholder="Carboidratos (g)" required>
+      <input type="number" id="calorias" placeholder="Calorias (kcal)" required>
+      <select id="dia">
+        <option value="Segunda">Segunda</option>
+        <option value="Terça">Terça</option>
+        <option value="Quarta">Quarta</option>
+        <option value="Quinta">Quinta</option>
+        <option value="Sexta">Sexta</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <!-- Cardápio por dia -->
+    <div class="semana">
+      <div class="dia" data-dia="Segunda"><h2>Segunda</h2><ul></ul></div>
+      <div class="dia" data-dia="Terça"><h2>Terça</h2><ul></ul></div>
+      <div class="dia" data-dia="Quarta"><h2>Quarta</h2><ul></ul></div>
+      <div class="dia" data-dia="Quinta"><h2>Quinta</h2><ul></ul></div>
+      <div class="dia" data-dia="Sexta"><h2>Sexta</h2><ul></ul></div>
+    </div>
+
+    <!-- Gráfico semanal -->
+    <h2>📊 Resumo Nutricional da Semana</h2>
+    <canvas id="graficoSemana" width="400" height="200"></canvas>
+
+    <!-- Botão para gerar cardápio automático -->
+    <button id="gerar-ia">
+      🤖 Gerar Cardápio Equilibrado
+    </button>
+
+    <!-- Sugestões automáticas -->
+    <h2>🤖 Sugestões Automáticas</h2>
+    <div id="sugestoes"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
